@@ -1,22 +1,14 @@
-#let Fachschaft = [InfoMathPhys]
-
 #import "@preview/zebraw:0.6.3": *
+#import "lib/template.typ": conf
+#import "lib/stringformat.typ": stringstyle
 
-#show: zebraw
-#set document(author: "Xenia Herr", description: "Python Programmierkurs der Fachschaft " + Fachschaft)
-
-
-#set page(paper: "a4")
-
+ #set document(author: "Xenia Herr", description: "Python Programmierkurs der Fachschaft MathPhysInfo " )
 #let title = "Programmiervorkurs"
-#let subtitle = "Fachschaft " + Fachschaft
-#show heading.where(level: 2) : set text(size: 22pt, style: "italic", weight: "light")
-#show heading.where(level: 2) : it => [ #counter(heading).step() #pagebreak()  Lektion #counter(heading).display(): #it.body #move(dy: -22pt, line(length: 100%)) #linebreak() ] 
+#let subtitle = "Fachschaft MathPhysInfo" 
 
-#show heading.where(level: 1) : set text(size: 22pt, style: "italic", weight: "light")
-#show heading.where(level: 1) : it => [   #pagebreak() #set align(center+ horizon)
-    #text(size: 34pt, style: "italic", weight: "light")[Kapitel: #counter(heading.where(level: 1)).display() #it.body ] #counter(heading.where(level: 1)).step()
-]
+#show: conf
+#show: zebraw
+#show: stringstyle 
 
 
 
@@ -51,7 +43,11 @@
 
 #include "Lektionen/manpages.typ"
 
+#include "Lektionen/rechte.typ"
+
 == NixOs Package management
+
+
 
 == Tiling Window Manager
 
