@@ -2,9 +2,10 @@
 #let stringstyle = doc => {
 
 
-show "MathPhysInfo": it => [InfoInfoInfo]
+    show "MathPhysInfo": it => [InfoInfoInfo]
     show "Python": emph
-//    show "Cpp": it => [Python]
+    show regex("\\.cpp\\b"): [Cpp]
+    show "Cpp": it => box(width: 2em)[#image("../Assets/SadEmoji.jpg")]
 
 
     doc

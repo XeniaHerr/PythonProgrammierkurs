@@ -54,3 +54,16 @@ body
     set enum(numbering: "a)")
     body
 }
+
+
+#let MakeSetting(title: "", show-heading: true, body) = {
+
+    if show-heading {
+        heading(level: 3)[#title]}
+    body
+} 
+
+
+#let Praxis = MakeSetting.with(title: "Praxis")
+#let Spiel = MakeSetting.with(title: "Spiel")
+#let Theorie = MakeSetting.with(title: "Theorie")

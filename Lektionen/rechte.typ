@@ -1,7 +1,7 @@
 
-#import "../lib/helpers.typ": Quiz;
+#import "../lib/helpers.typ": *;
 == Dateirechte
-
+#Theorie()[
 Wir machen mal wieder eine kurze Pause von \Cpp um euch ein weiteres wichtiges
 Konzept der Linux-Welt nahe zu bringen: Dateirechte.
 
@@ -58,8 +58,9 @@ Wenn ihr die Berechtigungen von Dateien ändern wollt, könnt ihr dazu
     chmod`), dazu muss sie euch aber gehören. Wenn ihr die Eigentümerin einer Datei
 ändern wollt, könnt ihr dazu `chown` nutzen -- dazu müsst ihr aus
 Sicherheitsgründen allerdings Administratorin sein.
+]
 
-=== Praxis
+#Praxis()[
 
 + Geht in ein Verzeichnis, in dem eine `.cpp`-Datei liegt und
               kompiliert sie. Macht ein `ls -l` und vergleicht die Rechte der
@@ -70,8 +71,10 @@ Sicherheitsgründen allerdings Administratorin sein.
           Bits sind gesetzt?
 
 
+]
 
-=== Spiel
+#Spiel()[
+
 
 +  Versucht, `/etc/shadow` in einem Editor zu öffnen.
 +  Legt (z.B. mit dem Texteditor) eine Datei (Es geht nicht um
@@ -86,15 +89,7 @@ Sicherheitsgründen allerdings Administratorin sein.
 
 
 
-// \textbf{Quiz 9}\\
-// \textit{Welche Bits existieren?}
-// \begin{enumerate}[label=\alph*)]
-//     \item readable für Gruppe
-//     \item Rechte dürfen nicht geändert werden
-//     \item executable für alle Nutzerinnen
-//     \item writable für Eigentümerin
-// \end{enumerate}
-
+]
 
 #Quiz()[
     Welche Bit's existieren?

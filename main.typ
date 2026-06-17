@@ -34,6 +34,8 @@
 
 = Intro
 
+== Vorbereitung eigener Computer
+
 
 =  Unix artige Betriebssysteme
 
@@ -57,23 +59,6 @@
 == Numpy
 
 
-// #show raw.where(block: true): it => {
-//     for i, text in it.text.split("\n") {
-//     }
-
-// }
-
-#show raw.where(block: true): it => { set par(justify: false); grid(
-  columns: (100%, 100%),
-  column-gutter: -100%,
-    block(width: 100%, inset: 0em, for (i, line) in it.text.split("\n").filter( it => it != "").enumerate() {
-    box(width: 0pt, align(right, str(i + 1) + h(1em)))
-    hide(line)
-    linebreak()
-  }),
-    //  block(radius: 1em, fill: luma(246), width: 100%, inset: 1em, it),
-    it
-)}
 
 #let codesnippet(path, name) = {
     [#set align(center)
@@ -83,7 +68,5 @@
     rect(stroke: gray, width: 100%)[
         #raw(lang: "Python", read(path), block: true)]
 }
-
-//#codesnippet("Code/helloworld.py", "helloworld.py")
 
 #zebraw(raw(lang: "Python", read("Code/helloworld.py"), block: true))

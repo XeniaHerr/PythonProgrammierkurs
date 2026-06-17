@@ -1,7 +1,8 @@
-#import "../lib/helpers.typ"
+#import "../lib/helpers.typ": *
 
 == Die Shell
 
+#Theorie(show-heading: false )[
 Wenn ihr bisher nur mit Windows oder Mac gearbeitet habt, habt ihr
 wahrscheinlich in der letzten Lektion nebenbei etwas neues Kennen gelernt: Die
 Shell.
@@ -40,66 +41,41 @@ ihr  `pwd` nutzen, zum Kompilieren von \Cpp-Programmen habt ihr den Befehl
 könnt ihr den Befehl `man` (für „Manual“) geben, gefolgt von dem Befehl,
 zu dem ihr Hilfe braucht (über `man` werden wir später noch
 ausführlicher reden).
+]
 
-//\newpage
 #pagebreak()
-=== Praxis
+#Praxis()[
+
 + Öffnet ein Terminal und gebt die folgenden Befehle ein
 + [Insert file]
-// \begin{praxis}
-//     \begin{enumerate}
-//         \item Öffnet ein Terminal und gebt die folgenden Befehle ein:
-//               \inputshell{basics.sh}
-//     \end{enumerate}
-// \end{praxis}
+]
+#Spiel()[
 
-
-=== Spiel
-+ Versucht selbst durch euer Nutzerverzeichnis (\emph{home}) zu navigieren.
++ Versucht selbst durch euer Nutzerverzeichnis (_home_) zu navigieren.
               Wie viele Lektionen hat der Vorkurs in diesem Verzeichnis?
-+ Was passiert, wenn ihr euer Homeverzeichnis verlasst (\texttt{cd ..}
+    + Was passiert, wenn ihr euer Homeverzeichnis verlasst (`cd ..`
       während ihr darin seid)?
-+ Versucht in der manpage von ls (\texttt{man ls}) zu stöbern und die
+    + Versucht in der manpage von ls (`man ls`)  zu stöbern und die
       verschiedenen Parameter, mit denen ihr das Verhalten steuern könnt zu
       erforschen. Findet ihr heraus, wie ihr den Verzeichnisinhalt in einem
       langen Listenformat (long listing format) anzeigen lassen könnt (in dem
       unter anderem auch die Dateigröße zu jeder Datei steht). 
-      Hinweis: mit \texttt{\textbackslash Suchbegriff} kann innerhalb von \texttt{man} gesucht werden.
+      Hinweis: mit `/Suchbegriff` kann innerhalb von `man` gesucht werden.
 + Um schnell mit der Shell zu arbeiten gibt es einige Tricks. 
 
-  Damit lange Dateinamen nicht immer komplett eingegeben werden müssen, gibt es die sogenannte \texttt{tab completion}. 
-        Um bereits eingegebene Befehle nochmals auszuführen die \texttt{history}. Finde heraus wie diese funktionieren!
-
-
-
-
-// \begin{spiel}
-//     \begin{enumerate}
-//         \item Versucht selbst durch euer Nutzerverzeichnis (\emph{home}) zu navigieren.
-//               Wie viele Lektionen hat der Vorkurs in diesem Verzeichnis?
-//         \item Was passiert, wenn ihr euer Homeverzeichnis verlasst (\texttt{cd ..}
-//               während ihr darin seid)?
-//         \item Versucht in der manpage von ls (\texttt{man ls}) zu stöbern und die
-//               verschiedenen Parameter, mit denen ihr das Verhalten steuern könnt zu
-//               erforschen. Findet ihr heraus, wie ihr den Verzeichnisinhalt in einem
-//               langen Listenformat (long listing format) anzeigen lassen könnt (in dem
-//               unter anderem auch die Dateigröße zu jeder Datei steht). 
-//               Hinweis: mit \texttt{\textbackslash Suchbegriff} kann innerhalb von \texttt{man} gesucht werden.
-//         \item Um schnell mit der Shell zu arbeiten gibt es einige Tricks. 
-//         Damit lange Dateinamen nicht immer komplett eingegeben werden müssen, gibt es die sogenannte \texttt{tab completion}. 
-//         Um bereits eingegebene Befehle nochmals auszuführen die \texttt{history}. Finde heraus wie diese funktionieren!
-//     \end{enumerate}
-//   \end{spiel}
+  Damit lange Dateinamen nicht immer komplett eingegeben werden müssen, gibt es die sogenannte `tap completion`. 
+        Um bereits eingegebene Befehle nochmals auszuführen die `history`. Finde heraus wie diese funktionieren!
+]
 
 
 Falls euch das alles verwirrt, fragt entweder direkt nach oder wartet auf
 Lektion 6, da geht es zu Manpages noch mal ins Detail.
 
-Ihr findet unter \url{http://blog.ezelo.de/basic-linux-befehle/} #link("https://blog.ezelo.de/basic-linux-befehle/") auch noch mal
+Ihr findet unter #link("https://blog.ezelo.de/basic-linux-befehle/") auch noch mal
 die wichtigsten Befehle zusammengefasst.
 
 
-#helpers.Quiz[
+#Quiz[
     + Ihr geht in ein zufälliges Unterverzeichnis
     + Ihr bleibt im gleichen Verzeichnis
     + Ihr verlasst euer aktuelles Verzeichnis
@@ -108,11 +84,3 @@ die wichtigsten Befehle zusammengefasst.
 ]
 
 
-// \textbf{Quiz 2}\\
-// \textit{Was passiert, wenn ihr \texttt{cd .} ausführt?}
-// \begin{enumerate}[label=\alph*)]
-//     \item Ihr geht in ein zufälliges Unterverzeichnis
-//     \item Ihr bleibt im gleichen Verzeichnis
-//     \item Ihr verlasst euer aktuelles Verzeichnis
-//     \item Ihr geht direkt in euer Homeverzeichnis
-// \end{enumerate}

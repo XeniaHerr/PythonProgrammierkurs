@@ -1,6 +1,8 @@
-#import "../lib/helpers.typ"
+#import "../lib/helpers.typ": *
 == Manpages
 
+
+#Theorie(show-heading: false)[
 Wir machen eine kurze Pause vom \Cpp und schauen uns in der Zwischenzeit
 _man pages_ an. Wie wir bereits fest gestellt haben, kann man diese
 benutzen, um sich mehr Informationen über Befehle anzeigen zu lassen. Wir
@@ -8,10 +10,10 @@ wollen uns jetzt genauer anschauen, wie man all die Informationen in einer man
 page am Besten konsumiert.
 
 Wir schauen uns das am Beispiel der Manpage `man cp` an (`cp` ist
-der Befehl zum Kopieren von Dateien).
+    der Befehl zum Kopieren von Dateien).]
 
+#Praxis()[
 
-=== Praxis
 
 + Öffnet eine Konsole und gebt `man cp` ein.
 
@@ -24,7 +26,7 @@ sections:
 
 
 
-#helpers.description(format: it => raw(it))[
+#description(format: it => raw(it))[
 / NAME:
         Gibt euch den Namen des Befehls und eine Einzeilige Beschreibung an
 
@@ -81,7 +83,7 @@ sections:
 
 ]
 Und wenn ihr mal wirklich keine Zeit habt, die ganze page zu lesen, könnt ihr mit `/` auch nach Begriffen innerhalb der page suchen: Zum Beispiel `/close`
-
+]
 === Praxis
 + Öffnet die man page von `ls`. Findet die Optionen fürs Lange
                               Listenformat (long listing format), zum Sortieren nach Dateigröße
@@ -106,10 +108,11 @@ Und wenn ihr mal wirklich keine Zeit habt, die ganze page zu lesen, könnt ihr m
       behalten.
 
 //TODO: Es gibt vielleicht einen besseren Weg die Quizzes zu gestalten (eventuell mit lösungen oder so)
+// Rotierter Text unten drunter oder am Besten am ende von der Lektion oder dem ganzen Buch
 
 
 
-#helpers.Quiz[
+#Quiz[
 Was findet man alles in einer Manpage?
 + nützliche Informationen
 + viel Text
