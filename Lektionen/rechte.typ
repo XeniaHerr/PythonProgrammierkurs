@@ -91,7 +91,7 @@ Sicherheitsgründen allerdings Administratorin sein.
 
 ]
 
-#Quiz()[
+#Quiz(answer: "a), c), d)")[
     Welche Bit's existieren?
     + readable für Gruppe
     + Rechte dürfen nicht geändert werden

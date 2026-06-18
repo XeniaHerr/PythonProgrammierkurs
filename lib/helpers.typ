@@ -1,3 +1,4 @@
+#import "@preview/zebraw:0.6.3": *
 
 #let description( format : it => emph(it), body) = {
     set terms(hanging-indent: 2.5em)
@@ -45,14 +46,51 @@ body
 
 }
 
+#let Code(path, basename: "../Code/") = {
+let content = {
+    let raw_c = read(basename + path)
+    // Remove trailing newline
+     if (raw_c.last() == "\n") {
+        str.slice(raw_c, 0, -1)
+        
+        
+    }
+    else {raw_c}
+}
 
 
-#let Quiz(body) = {
-    let number = context counter(heading).get().at(0)
+zebraw(raw(lang: "Python", content, block: true))
+}
 
+
+
+#let Quiz_answers = state("Quiz_answers", ())
+
+// Quiz is  abit more complicated than the other environments 
+#let Quiz(answer: "", body) = {
+     context {
+    let number =   counter(heading).get().at(0)
+     Quiz_answers.update(s => s + ((number, answer),))
+    
     [=== Quiz #number ]
     set enum(numbering: "a)")
     body
+     }
+}
+
+#let Quiz_answers_table() = {
+
+    [ Wir haben #context Quiz_answers.final().len() Aswers]
+
+    context    grid(columns: (1fr, 1fr), row-gutter: 1em,
+        [Quiz], [Antwort], grid.hline(), ..Quiz_answers.final().map(((n, a)) => ( [#n],
+        [#a])).flatten()
+
+    )
+
+    
+
+    
 }
 
 
@@ -62,6 +100,9 @@ body
         heading(level: 3)[#title]}
     body
 } 
+
+
+
 
 
 #let Praxis = MakeSetting.with(title: "Praxis")

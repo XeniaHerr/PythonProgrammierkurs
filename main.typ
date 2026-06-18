@@ -1,6 +1,7 @@
-#import "@preview/zebraw:0.6.3": *
 #import "lib/template.typ": conf
 #import "lib/stringformat.typ": stringstyle
+#import "lib/helpers.typ": Quiz_answers_table, Code
+#import "@preview/zebraw:0.6.3": *
 
  #set document(author: "Xenia Herr", description: "Python Programmierkurs der Fachschaft MathPhysInfo " )
 #let title = "Programmiervorkurs"
@@ -69,4 +70,11 @@
         #raw(lang: "Python", read(path), block: true)]
 }
 
-#zebraw(raw(lang: "Python", read("Code/helloworld.py"), block: true))
+
+//#zebraw(raw(lang: "Python", code, block: true))
+
+
+#Code("helloworld.py")
+
+
+

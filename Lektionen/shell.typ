@@ -75,7 +75,8 @@ Ihr findet unter #link("https://blog.ezelo.de/basic-linux-befehle/") auch noch m
 die wichtigsten Befehle zusammengefasst.
 
 
-#Quiz[
+#Quiz(answer: "Ihr bleibt im gleichen Verzeichnis")[
+    Was passiert wenn ihr `cd . ` ausführt?
     + Ihr geht in ein zufälliges Unterverzeichnis
     + Ihr bleibt im gleichen Verzeichnis
     + Ihr verlasst euer aktuelles Verzeichnis

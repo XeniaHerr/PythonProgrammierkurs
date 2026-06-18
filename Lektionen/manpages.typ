@@ -112,7 +112,7 @@ Und wenn ihr mal wirklich keine Zeit habt, die ganze page zu lesen, könnt ihr m
 
 
 
-#Quiz[
+#Quiz(answer: "wie man einen Befehl verwendet")[
 Was findet man alles in einer Manpage?
 + nützliche Informationen
 + viel Text
